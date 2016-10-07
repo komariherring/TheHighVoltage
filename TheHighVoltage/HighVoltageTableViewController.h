@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@protocol UnitsListDelegate
 
+- (void)unitWasChosen:(NSString *)unitName;
 
 @end
 
+@interface HighVoltageTableViewController : UITableViewController
+
+@property int returnPressedCount;
+
+
+@end
